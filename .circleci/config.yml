@@ -19,6 +19,8 @@ jobs:
       - run: dotnet pack src\Datadog.Trace.OpenTracing\Datadog.Trace.OpenTracing.csproj
       - run: msbuild Datadog.Trace.proj /t:BuildCpp /p:Configuration=Release;Platform=x64
       - run: msbuild Datadog.Trace.proj /t:BuildCpp /p:Configuration=Release;Platform=x86
+      - run: dotnet test -c Release test\Datadog.Trace.IntegrationTests\Datadog.Trace.IntegrationTests.csproj
+      - run: dotnet test -c Release test\Datadog.Trace.OpenTracing.IntegrationTests\Datadog.Trace.OpenTracing.IntegrationTests.csproj
       - run: msbuild Datadog.Trace.proj /t:msi /p:Configuration=Release;Platform=x64
       - run: msbuild Datadog.Trace.proj /t:msi /p:Configuration=Release;Platform=x86
       - run: msbuild Datadog.Trace.proj /t:CreateHomeDirectory /p:Configuration=Release;Platform=x64
