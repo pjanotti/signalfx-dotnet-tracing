@@ -252,6 +252,7 @@ namespace Datadog.Trace
                     }
                     else
                     {
+                        // TODO: Truncate here prior to acquiring lock.
                         // lock when modifying the collection
                         lock (_tagsLock)
                         {
@@ -302,6 +303,7 @@ namespace Datadog.Trace
                 return this;
             }
 
+            // TODO: Truncate "string value" below.
             var loggedFields = fields.ToDictionary(x => x.Key, x => x.Value.ToString());
             Logs[timestamp] = loggedFields;
             return this;
