@@ -1,0 +1,26 @@
+<!-- Modified by SignalFx -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- NuGet -->
+    <Version>0.1.7-rc.3</Version>
+    <Title>SignalFx Tracing OpenTracing</Title>
+    <Description>Provides OpenTracing support for SignalFx Tracing</Description>
+    <PackageTags>$(PackageTags);OpenTracing</PackageTags>
+    <AssemblyName>SignalFx.Tracing.OpenTracing</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SignalFx.Tracing\Datadog.Trace.csproj" />
+
+    <PackageReference Include="OpenTracing" Version="0.12.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' != 'netstandard2.0' ">
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+</Project>
