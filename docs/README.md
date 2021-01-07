@@ -64,8 +64,8 @@ rem Build C# projects (Platform: always AnyCPU)
 msbuild Datadog.Trace.proj /t:BuildCsharp /p:Configuration=Release
 
 rem Build NuGet packages
-dotnet pack src\Datadog.Trace\Datadog.Trace.csproj
-dotnet pack src\Datadog.Trace.OpenTracing\Datadog.Trace.OpenTracing.csproj
+dotnet pack src\SignalFx.Tracing\Datadog.Trace.csproj
+dotnet pack src\SignalFx.Tracing.OpenTracing\Datadog.Trace.OpenTracing.csproj
 
 rem Build C++ projects
 rem The native profiler depends on the Datadog.Trace.ClrProfiler.Managed.Loader C# project so be sure that is built first

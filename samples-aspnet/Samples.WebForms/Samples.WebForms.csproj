@@ -235,7 +235,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Datadog.Trace\Datadog.Trace.csproj">
+    <ProjectReference Include="..\..\src\SignalFx.Tracing\Datadog.Trace.csproj">
       <Project>{5dfdf781-f24c-45b1-82ef-9125875a80a4}</Project>
       <Name>Datadog.Trace</Name>
     </ProjectReference>

@@ -31,8 +31,8 @@ Users who need manual instrumentation should reference the "Datadog.Trace" packa
 
   <ItemGroup>
     <ProjectReference Include="..\Datadog.Trace.ClrProfiler.Managed.Core\Datadog.Trace.ClrProfiler.Managed.Core.csproj" />
-    <ProjectReference Include="..\Datadog.Trace\Datadog.Trace.csproj" />
-    <ProjectReference Include="..\Datadog.Trace.OpenTracing\Datadog.Trace.OpenTracing.csproj" />
+    <ProjectReference Include="..\SignalFx.Tracing\Datadog.Trace.csproj" />
+    <ProjectReference Include="..\SignalFx.Tracing.OpenTracing\Datadog.Trace.OpenTracing.csproj" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
