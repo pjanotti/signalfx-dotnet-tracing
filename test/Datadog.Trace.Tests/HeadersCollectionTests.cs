@@ -1,8 +1,9 @@
 using System.Globalization;
 using System.Net;
 using System.Net.Http;
-using Datadog.Trace.ExtensionMethods;
-using Datadog.Trace.Headers;
+using SignalFx.Tracing;
+using SignalFx.Tracing.ExtensionMethods;
+using SignalFx.Tracing.Headers;
 using Xunit;
 
 namespace Datadog.Trace.Tests

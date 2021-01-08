@@ -5,10 +5,10 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Net;
 using Datadog.Trace.ClrProfiler.Emit;
-using Datadog.Trace.ExtensionMethods;
-using Datadog.Trace.Headers;
-using Datadog.Trace.Logging;
-using Datadog.Trace.Util;
+using SignalFx.Tracing.ExtensionMethods;
+using SignalFx.Tracing.Headers;
+using SignalFx.Tracing.Logging;
+using SignalFx.Tracing.Util;
 
 namespace Datadog.Trace.ClrProfiler.Integrations
 {

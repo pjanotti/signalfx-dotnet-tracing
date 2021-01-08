@@ -5,8 +5,8 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using Datadog.Trace.ClrProfiler.Emit;
-using Datadog.Trace.ExtensionMethods;
-using Datadog.Trace.Logging;
+using SignalFx.Tracing.ExtensionMethods;
+using SignalFx.Tracing.Logging;
 
 namespace Datadog.Trace.ClrProfiler.Integrations
 {

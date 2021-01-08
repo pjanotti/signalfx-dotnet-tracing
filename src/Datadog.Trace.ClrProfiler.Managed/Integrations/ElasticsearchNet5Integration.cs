@@ -4,7 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Datadog.Trace.ClrProfiler.Emit;
 using Datadog.Trace.ClrProfiler.Helpers;
-using Datadog.Trace.Logging;
+using SignalFx.Tracing.Logging;
 
 namespace Datadog.Trace.ClrProfiler.Integrations
 {

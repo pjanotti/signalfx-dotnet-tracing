@@ -10,9 +10,9 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 using Datadog.Trace.ClrProfiler.Emit;
-using Datadog.Trace.ExtensionMethods;
-using Datadog.Trace.Logging;
-using Datadog.Trace.Util;
+using SignalFx.Tracing.ExtensionMethods;
+using SignalFx.Tracing.Logging;
+using SignalFx.Tracing.Util;
 
 namespace Datadog.Trace.ClrProfiler.Integrations
 {

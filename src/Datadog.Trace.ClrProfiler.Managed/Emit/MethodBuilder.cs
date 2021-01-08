@@ -5,9 +5,9 @@ using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
 using Datadog.Trace.ClrProfiler.Helpers;
-using Datadog.Trace.Configuration;
-using Datadog.Trace.DogStatsd;
-using Datadog.Trace.Logging;
+using SignalFx.Tracing.Configuration;
+using SignalFx.Tracing.DogStatsd;
+using SignalFx.Tracing.Logging;
 using Sigil;
 
 namespace Datadog.Trace.ClrProfiler.Emit

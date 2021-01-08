@@ -2,9 +2,9 @@
 using System;
 using System.Data;
 using System.Data.Common;
-using Datadog.Trace.ExtensionMethods;
-using Datadog.Trace.Logging;
-using Datadog.Trace.Util;
+using SignalFx.Tracing.ExtensionMethods;
+using SignalFx.Tracing.Logging;
+using SignalFx.Tracing.Util;
 
 namespace Datadog.Trace.ClrProfiler
 {

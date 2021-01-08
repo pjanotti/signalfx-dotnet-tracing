@@ -1,7 +1,7 @@
 // Modified by SignalFx
 using System;
-using Datadog.Trace.Logging;
-using Datadog.Trace.Vendors.Serilog.Events;
+using SignalFx.Tracing.Logging;
+using SignalFx.Tracing.Vendors.Serilog.Events;
 
 namespace Datadog.Trace.ClrProfiler
 {
