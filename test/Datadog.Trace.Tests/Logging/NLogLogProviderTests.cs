@@ -4,6 +4,7 @@ using NLog;
 using NLog.Config;
 using NLog.Layouts;
 using NLog.Targets;
+using SignalFx.Tracing;
 using SignalFx.Tracing.Logging;
 using SignalFx.Tracing.Logging.LogProviders;
 using Xunit;

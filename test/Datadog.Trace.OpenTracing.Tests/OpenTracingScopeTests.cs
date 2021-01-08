@@ -2,7 +2,7 @@
 using System;
 using Datadog.Trace.Agent;
 using Datadog.Trace.Configuration;
-using Datadog.Trace.Sampling;
+using SignalFx.Tracing.Sampling;
 using Moq;
 using OpenTracing;
 using Xunit;

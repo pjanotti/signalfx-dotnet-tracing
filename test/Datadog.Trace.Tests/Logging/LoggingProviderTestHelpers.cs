@@ -5,6 +5,7 @@ using System.IO;
 using System.Text;
 using Moq;
 using Serilog.Formatting.Display;
+using SignalFx.Tracing;
 using SignalFx.Tracing.Agent;
 using SignalFx.Tracing.Configuration;
 using SignalFx.Tracing.Logging;

@@ -3,10 +3,9 @@ using System.Globalization;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using Datadog.Trace.ExtensionMethods;
-using Datadog.Trace.Headers;
-// using Datadog.Trace.TestHelpers;
-using Moq;
+using SignalFx.Tracing;
+using SignalFx.Tracing.ExtensionMethods;
+using SignalFx.Tracing.Headers;
 using Xunit;
 
 namespace Datadog.Trace.Tests

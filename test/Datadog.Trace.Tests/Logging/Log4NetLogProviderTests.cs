@@ -7,6 +7,7 @@ using log4net.Config;
 using log4net.Core;
 using log4net.Layout;
 using Newtonsoft.Json;
+using SignalFx.Tracing;
 using SignalFx.Tracing.Logging;
 using SignalFx.Tracing.Logging.LogProviders;
 using Xunit;

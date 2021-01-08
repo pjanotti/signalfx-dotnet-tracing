@@ -3,9 +3,10 @@ using System;
 using System.Collections.Generic;
 using Serilog;
 using Serilog.Events;
-using Xunit;
+using SignalFx.Tracing;
 using SignalFx.Tracing.Logging;
 using SignalFx.Tracing.Logging.LogProviders;
+using Xunit;
 
 namespace Datadog.Trace.Tests.Logging
 {

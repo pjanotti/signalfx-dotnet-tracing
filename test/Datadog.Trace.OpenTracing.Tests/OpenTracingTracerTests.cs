@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Datadog.Trace.Agent;
 using Datadog.Trace.Configuration;
-using Datadog.Trace.Sampling;
+using SignalFx.Tracing.Sampling;
 using Datadog.Trace.TestHelpers;
 using Moq;
 using OpenTracing;
