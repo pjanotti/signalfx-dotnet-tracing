@@ -9,7 +9,7 @@ namespace SignalFx.Tracing.DiagnosticListeners
 {
     internal sealed class DiagnosticManager : IDiagnosticManager, IObserver<DiagnosticListener>, IDisposable
     {
-        private static readonly Vendors.Serilog.ILogger Log = SignalFxLogging.For<DiagnosticManager>();
+        private static readonly SignalFx.Tracing.Vendors.Serilog.ILogger Log = SignalFxLogging.For<DiagnosticManager>();
 
         private readonly IEnumerable<DiagnosticObserver> _diagnosticObservers;
         private readonly List<IDisposable> _subscriptions = new List<IDisposable>();

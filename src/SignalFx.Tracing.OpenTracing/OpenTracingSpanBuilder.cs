@@ -9,7 +9,7 @@ namespace SignalFx.Tracing.OpenTracing
 {
     internal class OpenTracingSpanBuilder : ISpanBuilder
     {
-        private static readonly Vendors.Serilog.ILogger Log = SignalFxLogging.For<OpenTracingSpanBuilder>();
+        private static readonly SignalFx.Tracing.Vendors.Serilog.ILogger Log = SignalFxLogging.For<OpenTracingSpanBuilder>();
 
         private readonly OpenTracingTracer _tracer;
         private readonly object _lock = new object();

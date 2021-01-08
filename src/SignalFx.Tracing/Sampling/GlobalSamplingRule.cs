@@ -6,7 +6,7 @@ namespace SignalFx.Tracing.Sampling
 {
     internal class GlobalSamplingRule : ISamplingRule
     {
-        private static readonly Vendors.Serilog.ILogger Log = SignalFxLogging.For<GlobalSamplingRule>();
+        private static readonly SignalFx.Tracing.Vendors.Serilog.ILogger Log = SignalFxLogging.For<GlobalSamplingRule>();
 
         private readonly float _globalRate;
 

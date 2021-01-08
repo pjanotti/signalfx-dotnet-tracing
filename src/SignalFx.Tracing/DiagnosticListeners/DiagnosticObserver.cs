@@ -9,7 +9,7 @@ namespace SignalFx.Tracing.DiagnosticListeners
 {
     internal abstract class DiagnosticObserver : IObserver<KeyValuePair<string, object>>
     {
-        private static readonly Vendors.Serilog.ILogger Log = SignalFxLogging.For<DiagnosticObserver>();
+        private static readonly SignalFx.Tracing.Vendors.Serilog.ILogger Log = SignalFxLogging.For<DiagnosticObserver>();
 
         protected DiagnosticObserver(ISignalFxTracer tracer)
         {

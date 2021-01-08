@@ -19,7 +19,7 @@ namespace SignalFx.Tracing.PlatformHelpers
 
         private static readonly Lazy<string> ContainerId = new Lazy<string>(GetContainerIdInternal, LazyThreadSafetyMode.ExecutionAndPublication);
 
-        private static readonly Vendors.Serilog.ILogger Log = SignalFxLogging.GetLogger(typeof(ContainerMetadata));
+        private static readonly SignalFx.Tracing.Vendors.Serilog.ILogger Log = SignalFxLogging.GetLogger(typeof(ContainerMetadata));
 
         /// <summary>
         /// Gets the id of the container executing the code.

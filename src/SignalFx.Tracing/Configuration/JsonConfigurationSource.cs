@@ -14,7 +14,7 @@ namespace SignalFx.Tracing.Configuration
     /// </summary>
     public class JsonConfigurationSource : IConfigurationSource
     {
-        private static readonly Vendors.Serilog.ILogger Log = SignalFxLogging.GetLogger(typeof(JsonConfigurationSource));
+        private static readonly SignalFx.Tracing.Vendors.Serilog.ILogger Log = SignalFxLogging.GetLogger(typeof(JsonConfigurationSource));
 
         private readonly JObject _configuration;
 

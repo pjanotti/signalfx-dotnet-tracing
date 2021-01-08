@@ -30,7 +30,7 @@ namespace SignalFx.Tracing.DiagnosticListeners
         private const string HttpRequestInOperationName = "aspnet_core.request";
         private const string NoHostSpecified = "UNKNOWN_HOST";
 
-        private static readonly Vendors.Serilog.ILogger Log = SignalFxLogging.For<AspNetCoreDiagnosticObserver>();
+        private static readonly SignalFx.Tracing.Vendors.Serilog.ILogger Log = SignalFxLogging.For<AspNetCoreDiagnosticObserver>();
 
         private static readonly PropertyFetcher HttpRequestInStartHttpContextFetcher = new PropertyFetcher("HttpContext");
         private static readonly PropertyFetcher HttpRequestInStopHttpContextFetcher = new PropertyFetcher("HttpContext");

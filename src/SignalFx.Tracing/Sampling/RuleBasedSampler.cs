@@ -7,7 +7,7 @@ namespace SignalFx.Tracing.Sampling
     {
         private const ulong KnuthFactor = 1_111_111_111_111_111_111;
 
-        private static readonly Vendors.Serilog.ILogger Log = SignalFxLogging.For<RuleBasedSampler>();
+        private static readonly SignalFx.Tracing.Vendors.Serilog.ILogger Log = SignalFxLogging.For<RuleBasedSampler>();
         private static bool _tracingWithoutLimitsEnabled = false;
 
         private readonly IRateLimiter _limiter;

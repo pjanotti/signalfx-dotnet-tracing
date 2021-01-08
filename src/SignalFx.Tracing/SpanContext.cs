@@ -12,7 +12,7 @@ namespace SignalFx.Tracing
     /// </summary>
     public class SpanContext : ISpanContext
     {
-        private static readonly Vendors.Serilog.ILogger Log = SignalFxLogging.For<SpanContext>();
+        private static readonly SignalFx.Tracing.Vendors.Serilog.ILogger Log = SignalFxLogging.For<SpanContext>();
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SpanContext"/> class

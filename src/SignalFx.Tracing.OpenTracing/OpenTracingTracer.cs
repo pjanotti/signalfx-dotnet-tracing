@@ -9,7 +9,7 @@ namespace SignalFx.Tracing.OpenTracing
 {
     internal class OpenTracingTracer : ITracer
     {
-        private static readonly Vendors.Serilog.ILogger Log = SignalFxLogging.For<OpenTracingTracer>();
+        private static readonly SignalFx.Tracing.Vendors.Serilog.ILogger Log = SignalFxLogging.For<OpenTracingTracer>();
 
         private readonly Dictionary<string, ICodec> _codecs;
 

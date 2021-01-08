@@ -14,7 +14,7 @@ namespace SignalFx.Tracing
     {
         private const NumberStyles NumberStyle = System.Globalization.NumberStyles.HexNumber;
         private static readonly CultureInfo InvariantCulture = CultureInfo.InvariantCulture;
-        private static readonly Vendors.Serilog.ILogger Log = SignalFxLogging.For<B3SpanContextPropagator>();
+        private static readonly SignalFx.Tracing.Vendors.Serilog.ILogger Log = SignalFxLogging.For<B3SpanContextPropagator>();
         private static readonly string UserKeep = ((int)SamplingPriority.UserKeep).ToString(CultureInfo.InvariantCulture);
 
         private B3SpanContextPropagator()

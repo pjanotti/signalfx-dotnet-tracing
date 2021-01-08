@@ -9,7 +9,7 @@ namespace SignalFx.Tracing.Sampling
 {
     internal class CustomSamplingRule : ISamplingRule
     {
-        private static readonly Vendors.Serilog.ILogger Log = SignalFxLogging.For<CustomSamplingRule>();
+        private static readonly SignalFx.Tracing.Vendors.Serilog.ILogger Log = SignalFxLogging.For<CustomSamplingRule>();
         private static readonly TimeSpan RegexTimeout = TimeSpan.FromSeconds(1);
 
         private readonly float _samplingRate;

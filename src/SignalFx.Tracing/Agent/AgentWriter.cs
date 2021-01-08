@@ -11,7 +11,7 @@ namespace SignalFx.Tracing.Agent
     {
         private const int TraceBufferSize = 1000;
 
-        private static readonly Vendors.Serilog.ILogger Log = SignalFxLogging.GetLogger(typeof(AgentWriter));
+        private static readonly SignalFx.Tracing.Vendors.Serilog.ILogger Log = SignalFxLogging.GetLogger(typeof(AgentWriter));
 
         private readonly AgentWriterBuffer<Span[]> _tracesBuffer = new AgentWriterBuffer<Span[]>(TraceBufferSize);
         private readonly IStatsd _statsd;

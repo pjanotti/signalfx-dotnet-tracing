@@ -4,6 +4,7 @@ using System;
 using System.Net;
 using System.ServiceModel.Channels;
 using Datadog.Trace.ClrProfiler.Emit;
+using SignalFx.Tracing;
 using SignalFx.Tracing.ExtensionMethods;
 using SignalFx.Tracing.Logging;
 
@@ -19,7 +20,7 @@ namespace Datadog.Trace.ClrProfiler.Integrations
 
         private const string ChannelHandlerTypeName = "System.ServiceModel.Dispatcher.ChannelHandler";
 
-        private static readonly Vendors.Serilog.ILogger Log = DatadogLogging.GetLogger(typeof(WcfIntegration));
+        private static readonly SignalFx.Tracing.Vendors.Serilog.ILogger Log = SignalFxLogging.GetLogger(typeof(WcfIntegration));
 
         /// <summary>
         /// Instrumentation wrapper for System.ServiceModel.Dispatcher.ChannelHandler

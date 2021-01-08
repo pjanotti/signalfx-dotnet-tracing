@@ -9,7 +9,7 @@ namespace SignalFx.Tracing.Agent
 {
     internal class ZipkinApi : IApi
     {
-        private static readonly Vendors.Serilog.ILogger Log = SignalFxLogging.GetLogger(typeof(ZipkinApi));
+        private static readonly SignalFx.Tracing.Vendors.Serilog.ILogger Log = SignalFxLogging.GetLogger(typeof(ZipkinApi));
 
         private readonly HttpClient _client;
         private readonly TracerSettings _settings;

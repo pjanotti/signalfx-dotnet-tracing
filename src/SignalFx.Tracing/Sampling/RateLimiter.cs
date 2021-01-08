@@ -7,7 +7,7 @@ namespace SignalFx.Tracing.Sampling
 {
     internal class RateLimiter : IRateLimiter
     {
-        private static readonly Vendors.Serilog.ILogger Log = SignalFxLogging.For<RateLimiter>();
+        private static readonly SignalFx.Tracing.Vendors.Serilog.ILogger Log = SignalFxLogging.For<RateLimiter>();
 
         private readonly ManualResetEventSlim _refreshEvent = new ManualResetEventSlim(initialState: true);
         private readonly ConcurrentQueue<DateTime> _intervalQueue = new ConcurrentQueue<DateTime>();

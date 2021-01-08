@@ -8,7 +8,7 @@ namespace SignalFx.Tracing
 {
     internal class TraceContext : ITraceContext
     {
-        private static readonly Vendors.Serilog.ILogger Log = SignalFxLogging.For<TraceContext>();
+        private static readonly SignalFx.Tracing.Vendors.Serilog.ILogger Log = SignalFxLogging.For<TraceContext>();
 
         private readonly DateTimeOffset _utcStart = DateTimeOffset.UtcNow;
         private readonly Stopwatch _stopwatch = Stopwatch.StartNew();

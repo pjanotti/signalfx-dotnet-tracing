@@ -1,6 +1,7 @@
 using System;
 using System.Data;
 using Datadog.Trace.ClrProfiler.Emit;
+using SignalFx.Tracing;
 using SignalFx.Tracing.Logging;
 
 namespace Datadog.Trace.ClrProfiler.Integrations.AdoNet
@@ -17,7 +18,7 @@ namespace Datadog.Trace.ClrProfiler.Integrations.AdoNet
         private const string DbCommandTypeName = "System.Data.IDbCommand";
         private const string DataReaderTypeName = "System.Data.IDataReader";
 
-        private static readonly Vendors.Serilog.ILogger Log = DatadogLogging.GetLogger(typeof(IDbCommandIntegration));
+        private static readonly SignalFx.Tracing.Vendors.Serilog.ILogger Log = SignalFxLogging.GetLogger(typeof(IDbCommandIntegration));
 
         /// <summary>
         /// Instrumentation wrapper for <see cref="IDbCommand.ExecuteReader()"/>.

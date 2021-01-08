@@ -1,7 +1,7 @@
 // Modified by SignalFx
 using System;
 using System.Data;
-using System.Data.Common;
+using SignalFx.Tracing;
 using SignalFx.Tracing.ExtensionMethods;
 using SignalFx.Tracing.Logging;
 using SignalFx.Tracing.Util;
@@ -15,7 +15,7 @@ namespace Datadog.Trace.ClrProfiler
     {
         public const string OperationName = "http.request";
 
-        private static readonly Vendors.Serilog.ILogger Log = DatadogLogging.GetLogger(typeof(ScopeFactory));
+        private static readonly SignalFx.Tracing.Vendors.Serilog.ILogger Log = SignalFxLogging.GetLogger(typeof(ScopeFactory));
 
         /// <summary>
         /// Creates a scope for outbound http requests and populates some common details.

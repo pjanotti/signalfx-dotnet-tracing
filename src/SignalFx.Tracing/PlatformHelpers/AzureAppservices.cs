@@ -29,7 +29,7 @@ namespace SignalFx.Tracing.PlatformHelpers
         /// </summary>
         internal static readonly string SiteNameKey = "WEBSITE_DEPLOYMENT_ID";
 
-        private static readonly Vendors.Serilog.ILogger Log = SignalFxLogging.GetLogger(typeof(AzureAppServices));
+        private static readonly SignalFx.Tracing.Vendors.Serilog.ILogger Log = SignalFxLogging.GetLogger(typeof(AzureAppServices));
 
         static AzureAppServices()
         {

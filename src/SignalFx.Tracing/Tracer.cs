@@ -21,7 +21,7 @@ namespace SignalFx.Tracing
     public class Tracer : ISignalFxTracer
     {
         private const string UnknownServiceName = "unnamed-dotnet-service";
-        private static readonly Vendors.Serilog.ILogger Log = SignalFxLogging.GetLogger(typeof(Tracer));
+        private static readonly SignalFx.Tracing.Vendors.Serilog.ILogger Log = SignalFxLogging.GetLogger(typeof(Tracer));
 
         /// <summary>
         /// The number of Tracer instances that have been created and not yet destroyed.

@@ -5,7 +5,7 @@ namespace SignalFx.Tracing
 {
     internal abstract class ScopeManagerBase : IScopeManager
     {
-        private static readonly Vendors.Serilog.ILogger Log = SignalFxLogging.GetLogger(typeof(ScopeManagerBase));
+        private static readonly SignalFx.Tracing.Vendors.Serilog.ILogger Log = SignalFxLogging.GetLogger(typeof(ScopeManagerBase));
 
         public event EventHandler<SpanEventArgs> SpanOpened;
 

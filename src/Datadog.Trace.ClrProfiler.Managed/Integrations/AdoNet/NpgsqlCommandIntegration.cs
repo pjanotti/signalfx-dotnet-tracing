@@ -4,6 +4,7 @@ using System.Data.Common;
 using System.Threading;
 using System.Threading.Tasks;
 using Datadog.Trace.ClrProfiler.Emit;
+using SignalFx.Tracing;
 using SignalFx.Tracing.Logging;
 
 namespace Datadog.Trace.ClrProfiler.Integrations.AdoNet

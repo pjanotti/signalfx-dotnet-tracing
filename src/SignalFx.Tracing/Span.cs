@@ -20,7 +20,7 @@ namespace SignalFx.Tracing
     /// </summary>
     public class Span : IDisposable, ISpan
     {
-        private static readonly Vendors.Serilog.ILogger Logger = SignalFxLogging.For<Span>();
+        private static readonly SignalFx.Tracing.Vendors.Serilog.ILogger Logger = SignalFxLogging.For<Span>();
         private static readonly bool IsLogLevelDebugEnabled = Logger.IsEnabled(LogEventLevel.Debug);
 
         private readonly object _lock = new object();
