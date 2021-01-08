@@ -378,7 +378,7 @@ namespace Datadog.Trace.OpenTracing.Tests
         public void RegisteredAsGlobalTracer_ByDefault()
         {
             var globalTracerRep = GlobalTracer.Instance.ToString();
-            Assert.Contains("Datadog.Trace.OpenTracing.OpenTracingTracer", globalTracerRep);
+            Assert.Contains("SignalFx.Tracing.OpenTracing.OpenTracingTracer", globalTracerRep);
         }
 
         [Fact]
