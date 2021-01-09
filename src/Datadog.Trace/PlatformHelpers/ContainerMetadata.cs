@@ -11,7 +11,7 @@ namespace SignalFx.Tracing.PlatformHelpers
     /// <summary>
     /// Utility class with methods to interact with container hosts.
     /// </summary>
-    internal static class ContainerMetadata
+    public static class ContainerMetadata
     {
         private const string ControlGroupsFilePath = "/proc/self/cgroup";
 
