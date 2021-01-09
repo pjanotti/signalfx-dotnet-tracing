@@ -102,8 +102,8 @@ namespace Datadog.Trace.Tests
             const ulong spanId = 7;
 
             var headers = InjectContext(
-                traceId.ToString(CultureInfo.InvariantCulture),
-                spanId.ToString(CultureInfo.InvariantCulture),
+                traceId.ToString("x16", CultureInfo.InvariantCulture),
+                spanId.ToString("x16", CultureInfo.InvariantCulture),
                 samplingPriority);
 
             var resultContext = B3SpanContextPropagator.Instance.Extract(headers);
@@ -118,8 +118,27 @@ namespace Datadog.Trace.Tests
         {
             IHeadersCollection headers = new HttpRequestMessage().Headers.Wrap();
             headers.Add(HttpHeaderNames.B3TraceId, traceId);
-            headers.Add(HttpHeaderNames.B3ParentId, spanId);
-            headers.Add(HttpHeaderNames.B3Flags, samplingPriority);
+            headers.Add(HttpHeaderNames.B3SpanId, spanId);
+
+            // Mimick the B3 injection mapping of samplingPriority
+            switch (samplingPriority)
+            {
+                case "0":
+                    // SamplingPriority.UserKeep
+                    headers.Add(HttpHeaderNames.B3Flags, "1");
+                    break;
+                case "1":
+                    // SamplingPriority.AutoKeep
+                    headers.Add(HttpHeaderNames.B3Sampled, "1");
+                    break;
+                case null:
+                    break;
+                default:
+                    // non-null sampling different from the ones above.
+                    headers.Add(HttpHeaderNames.B3Flags, "0");
+                    break;
+            }
+
             return headers;
         }
     }
