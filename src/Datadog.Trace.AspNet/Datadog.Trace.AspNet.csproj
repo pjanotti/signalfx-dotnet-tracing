@@ -28,7 +28,7 @@ Users who need manual instrumentation should reference the "Datadog.Trace" packa
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SignalFx.Tracing\Datadog.Trace.csproj" />
+    <ProjectReference Include="..\Datadog.Trace\Datadog.Trace.csproj" />
 
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Web" />
