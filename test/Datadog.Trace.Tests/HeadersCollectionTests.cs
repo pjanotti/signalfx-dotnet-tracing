@@ -123,19 +123,22 @@ namespace Datadog.Trace.Tests
             // Mimick the B3 injection mapping of samplingPriority
             switch (samplingPriority)
             {
+                case "-1":
+                    // SamplingPriority.UserReject
                 case "0":
-                    // SamplingPriority.UserKeep
-                    headers.Add(HttpHeaderNames.B3Flags, "1");
+                    // SamplingPriority.AutoReject
+                    headers.Add(HttpHeaderNames.B3Flags, "0");
                     break;
                 case "1":
                     // SamplingPriority.AutoKeep
                     headers.Add(HttpHeaderNames.B3Sampled, "1");
                     break;
-                case null:
+                case "2":
+                    // SamplingPriority.UserKeep
+                    headers.Add(HttpHeaderNames.B3Flags, "1");
                     break;
                 default:
-                    // non-null sampling different from the ones above.
-                    headers.Add(HttpHeaderNames.B3Flags, "0");
+                    // Invalid samplingPriority
                     break;
             }
 

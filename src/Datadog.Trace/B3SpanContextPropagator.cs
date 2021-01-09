@@ -78,7 +78,7 @@ namespace SignalFx.Tracing
             }
 
             var spanId = ParseHexUInt64(headers, HttpHeaderNames.B3SpanId);
-            var samplingPriority = ParseB3Sampling<SamplingPriority>(headers);
+            var samplingPriority = ParseB3Sampling(headers);
             return new SpanContext(traceId, spanId, samplingPriority);
         }
 
@@ -102,24 +102,17 @@ namespace SignalFx.Tracing
             return 0;
         }
 
-        private static T? ParseB3Sampling<T>(IHeadersCollection headers)
-            where T : struct, Enum
+        private static SamplingPriority? ParseB3Sampling(IHeadersCollection headers)
         {
-            string priority = string.Empty;
             var debugged = headers.GetValues(HttpHeaderNames.B3Flags).ToList();
             var sampled = headers.GetValues(HttpHeaderNames.B3Sampled).ToList();
-            if (debugged.Count != 0 && debugged[0] == "1")
+            if (debugged.Count != 0 && (debugged[0] == "0" || debugged[0] == "1"))
             {
-                priority = UserKeep;
+                 return debugged[0] == "1" ? SamplingPriority.UserKeep : null;
             }
-            else if (sampled.Count != 0)
+            else if (sampled.Count != 0 && (sampled[0] == "0" || sampled[0] == "1"))
             {
-                priority = sampled.First();
-            }
-
-            if (Enum.TryParse<T>(priority, out var result) && Enum.IsDefined(typeof(T), result))
-            {
-                return result;
+                return sampled[0] == "1" ? SamplingPriority.AutoKeep : SamplingPriority.AutoReject;
             }
 
             Log.Information(
@@ -129,7 +122,7 @@ namespace SignalFx.Tracing
                 HttpHeaderNames.B3Sampled,
                 string.Join(",", sampled));
 
-            return default;
+            return null;
         }
     }
 }
